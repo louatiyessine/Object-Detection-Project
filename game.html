@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch the Object - Game</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="game-body">
+    <div class="bg-game"></div>
+
+    <nav class="navbar navbar-dark fixed-top border-bottom border-primary">
+      <div class="container">
+        <div class="navbar-brand fw-bold fs-3">Catch the Object</div>
+        <div class="d-flex gap-4">
+          <div class="score-item">
+            <span class="score-label">Score:</span>
+            <span id="currentScore" class="score-value">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label">Best:</span>
+            <span id="highScore" class="score-value">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label">Lives:</span>
+            <span id="lives" class="score-value">3</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label">Difficulty:</span>
+            <span id="difficulty" class="score-value">Medium</span>
+          </div>
+        </div>
+        <div>
+          <a href="welcome.html" class="btn btn-light btn-sm rounded-pill px-3">
+            Home
+          </a>
+          <button
+            id="restartBtn"
+            class="btn btn-light btn-sm rounded-pill px-3"
+          >
+            Restart
+          </button>
+          <button
+            id="pauseBtn"
+            class="btn btn-outline-light btn-sm rounded-pill px-3"
+          >
+            Pause
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <canvas id="gameCanvas" class="game-canvas position-absolute"></canvas>
+
+    <div
+      id="gameOverOverlay"
+      class="game-over-overlay position-absolute d-none"
+    >
+      <div class="card shadow-lg border-0 mx-auto">
+        <div class="card-body text-center p-5">
+          <h2 class="display-4 fw-bold text-danger mb-4">Game Over!</h2>
+          <p class="lead mb-4">Final Score: <span id="finalScore">0</span></p>
+          <div class="d-grid gap-3 col-10 col-md-8 mx-auto">
+            <button
+              id="playAgainBtn"
+              class="btn btn-success btn-lg rounded-pill"
+            >
+              <i class="fas fa-play me-2"></i>Play Again
+            </button>
+            <a
+              href="welcome.html"
+              class="btn btn-outline-secondary btn-lg rounded-pill"
+            >
+              <i class="fas fa-home me-2"></i>Main Menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

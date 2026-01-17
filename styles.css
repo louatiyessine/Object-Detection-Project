@@ -1,0 +1,151 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  overflow: hidden;
+}
+
+body:not(.game-body) {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.bg-game {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/game_background.jpeg") center/cover no-repeat;
+  filter: brightness(0.9);
+}
+
+@media (max-width: 576px) {
+}
+
+.game-body {
+  font-family: "Poppins", sans-serif;
+  background: #0f0f0f;
+  overflow: hidden;
+  padding-top: 70px; 
+  padding-bottom: 80px; 
+}
+
+.game-canvas {
+  top: 70px; 
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 150px); 
+  background: rgba(0, 20, 40, 0.3); 
+  cursor: none; 
+  image-rendering: pixelated; 
+}
+
+
+.navbar-brand {
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+}
+
+.score-item {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.score-label {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  min-width: 50px;
+  display: inline-block;
+}
+
+.controls-hint {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+
+.hud-bottom {
+  backdrop-filter: blur(10px);
+}
+
+
+.game-over-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.game-over-overlay .card {
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+}
+
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+#pauseBtn.paused {
+  background: #ff4444;
+  border-color: #ff4444;
+}
+
+
+@media (max-width: 768px) {
+  .game-body {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .game-canvas {
+    top: 60px;
+    height: calc(100vh - 130px);
+  }
+
+  .score-item .score-value {
+    font-size: 1.25rem;
+  }
+
+  .controls-hint {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .d-flex.gap-4 {
+    gap: 1rem;
+  }
+
+  .score-item {
+    font-size: 0.9rem;
+  }
+}
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Parameters - Catch the Object</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="card shadow-lg border-0 rounded-4" style="max-width: 900px; width: 95%;">
+        <div class="card-body text-center p-4 p-md-5">
+
+            <h1 class="fw-bold text-primary display-5 mb-3">Game Parameters</h1>
+            <p class="lead mb-4">Choose your difficulty level</p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4 cursor-pointer">
+                    <div class="p-4 border rounded-4 shadow-sm h-100 difficulty-option " data-difficulty="easy">
+                        <h3 class="text-success fw-bold mb-3">Easy</h3>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fa-solid fa-check text-success me-2"></i>Moderate object speed</li>
+                            <li><i class="fa-solid fa-check text-success me-2"></i>Comfortable spawn rate</li>
+                            <li><i class="fa-solid fa-check text-success me-2"></i>Large objects</li>
+                            <li><i class="fa-solid fa-check text-success me-2"></i>Relaxed timer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 cursor-pointer">
+                    <div class="p-4 border border-warning rounded-4 shadow-sm h-100 difficulty-option active" data-difficulty="medium">
+                        <h3 class="text-warning fw-bold mb-3">Medium</h3>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fa-solid fa-check text-warning me-2"></i>Moderate object speed</li>
+                            <li><i class="fa-solid fa-check text-warning me-2"></i>Normal spawn rate</li>
+                            <li><i class="fa-solid fa-check text-warning me-2"></i>Medium objects</li>
+                            <li><i class="fa-solid fa-check text-warning me-2"></i>Standard timer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 cursor-pointer">
+                    <div class="p-4 border rounded-4 shadow-sm h-100 difficulty-option" data-difficulty="hard">
+                        <h3 class="text-danger fw-bold mb-3">Hard</h3>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fa-solid fa-check text-danger me-2"></i>Fast object speed</li>
+                            <li><i class="fa-solid fa-check text-danger me-2"></i>High spawn rate</li>
+                            <li><i class="fa-solid fa-check text-danger me-2"></i>Small objects</li>
+                            <li><i class="fa-solid fa-check text-danger me-2"></i>Fast timer</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-grid gap-3 col-10 col-md-6 mx-auto mt-5">
+                <button id="saveBtn" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                    <i class="fas fa-save me-2"></i>Save Settings
+                </button>
+
+                <a href="welcome.html" class="btn btn-outline-secondary btn-lg rounded-pill">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Menu
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/parameters.js"></script>
+    
+   
+
+</body>
+</html>
